@@ -1,0 +1,23 @@
+<resources>
+
+    <string name="app_name">Forms</string>
+
+    <string name="activity_name">Test Activity</string>
+    <string name="launcher_name">Launcher Name</string>
+
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_forms">Forms</string>
+    <string name="title_activity_post">Post</string>
+
+    <string name="nameLabel">Name</string>
+    <string name="addrLabel">Address</string>
+    <string name="foneLabel">Phone</string>
+    <string name="emailLabel">Email</string>
+    <string name="birthdateLabel">Birth Date</string>
+    <string name="newsletters">Newsletters (optional)</string>
+    <string name="submitButton">Submit</string>
+    <string name="resetButton">Reset</string>
+
+    <string name="okayDialogMsg">Form is incomplete!</string>
+    <string name="okayButton">Okay</string>
+</resources>
