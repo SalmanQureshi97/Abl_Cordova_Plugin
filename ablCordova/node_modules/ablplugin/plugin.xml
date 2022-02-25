@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova.plugin.abl" version="0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>ABLPlugin</name>
+    <js-module name="ABLPlugin" src="www/ABLPlugin.js">
+        <clobbers target="cordova.plugins.ABLPlugin" />
+    </js-module>
+    <platform name="android">
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="ABLPlugin">
+                <param name="android-package" value="cordova.plugin.abl.ABLPlugin" />
+            </feature>
+        </config-file>
+        <config-file parent="/*" target="AndroidManifest.xml"></config-file>
+
+
+        <config-file target="AndroidManifest.xml" parent="/manifest/application">
+            <activity android:theme="@style/Theme.AppCompat.Light" android:label="CNIC Availability" android:name="cordova.plugin.abl.CNIC_Availability"></activity>
+            <activity android:theme="@style/Theme.AppCompat.Light" android:label="OTP Verification" android:name="cordova.plugin.abl.OTP_Verification"></activity>
+        </config-file>
+
+
+        <source-file src="src/android/ABLPlugin.java" target-dir="src/cordova/plugin/abl/ABLPlugin" />
+        <!--  -->
+        <source-file src="src/android/CNIC_Availability.java" target-dir="src/cordova/plugin/abl/ABLPlugin" />
+        <source-file src="src/android/cnic_availability.xml" target-dir="res/layout" />
+        <!--  -->
+        <source-file src="src/android/OTP_Verification.java" target-dir="src/cordova/plugin/abl/ABLPlugin" />
+        <source-file src="src/android/otp_verification.xml" target-dir="res/layout" />
+        <!--  -->
+        <resource-file src="src/android/strings.xml" target="res/values/strings.xml" />
+        <!-- <resource-file src="src/android/custom_toolbar.xml" target="res/values/custom_toolbar.xml" /> -->
+        <resource-file src="src/android/colors.xml" target="res/values/colors.xml" />
+
+        <framework src="src/android/build.gradle" custom="true" type="gradleReference" />
+    </platform>
+</plugin>
